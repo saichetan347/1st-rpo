@@ -1,112 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sai Chetan | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chittoor Sai Chetan - Academic Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="assets/profile.jpg" alt="Sai Chetan" class="profile-pic" />
     <h1>Chittoor Sai Chetan</h1>
-    <p>Java Full Stack Developer | Cybersecurity Enthusiast</p>
+    <p>MCA Student | Java Developer</p>
   </header>
 
-  <section id="about">
-  <h2>About Me</h2>
-  <ul class="about-list">
-    <li>
-      🎓 I’m a <strong>passionate and committed</strong> MCA student from <strong>Mohan Babu University</strong>.
-    </li>
-    <li>
-      💻 Strong foundation in <strong>Java full-stack development</strong>with a passion for  <strong>cybersecurity</strong>.
-    </li>
-    <li>
-      🧠 Known for my <strong>problem-solving mindset</strong> and <strong>collaborative spirit</strong>.
-    </li>
-    <li>
-      🚀 Hands-on experience in <strong>software development</strong> and <strong>digital marketing</strong>.
-    </li>
-    <li>
-      🎯 problem-solver with a <strong>collaborative sprit</strong>, <strong>Building innovations</strong>, and <strong>user-centric solutions</strong>.
-    </li>
-  </ul>
+  <nav>
+    <ul>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#internships">Internships</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    
+    <!-- MCA Section -->
+    <div class="education-grid">
+      <div class="education-card">
+        <h3>Master of Computer Applications (MCA)</h3>
+        <p><strong>University:</strong> Mohan Babu University </p>
+        <p><strong>Duration:</strong> 2024 - 2026 (Expected)</p>
+        
+        <div class="semester-container">
+          <div class="semester">
+            <h4>Semester 1</h4>
+            <p><strong>CGPA:</strong> 9.17 </p>
+            <button onclick="downloadFile('all marks/pg mca.pdf')">Download Marksheet</button>
+          </div>
+          <div class="semester">
+            <h4>Semester 2</h4>
+            <p>Coming Soon</p>
+          </div>
+          <div class="semester">
+            <h4>Semester 3</h4>
+            <p>Coming Soon</p>
+          </div>
+          <div class="semester">
+            <h4>Semester 4</h4>
+            <p>Coming Soon</p>
+          </div>
+        </div>
+        
+        <div class="future-certificate">
+          <button class="certificate-btn" onclick="alert('MCA certificate will be available after completion in 2026')">
+            Download MCA Degree Certificate (Available after 2026)
+          </button>
+        </div>
+      </div>
+
+      <!-- Previous Degree -->
+      <div class="education-card">
+        <h3>[Your Previous Degree]</h3>
+        <p><strong>University/College:</strong> Emerald's Degree College</p>
+        <p><strong>CGPA/Percentage:</strong> 90 </p>
+        <p><strong>Year:</strong> 2024 </p>
+        <button onclick="downloadFile('all marks/Degree.pdf')">Download Marksheet</button>
+      </div>
+
+      <!-- Intermediate (12th) -->
+      <div class="education-card">
+        <h3>Intermediate (12th Grade)</h3>
+        <p><strong>Board:</strong> Board of Intermediate Education</p>
+        <p><strong>School:</strong> Emerald's Junior College </p>
+        <p><strong>Percentage:</strong> 71 </p>
+        <p><strong>Year:</strong> 2020 </p>
+        <button onclick="downloadFile('all marks/inter.pdf')">Download Marksheet</button>
+      </div>
+
+      <!-- 10th Grade -->
+      <div class="education-card">
+        <h3>10th Grade</h3>
+        <p><strong>Board:</strong> Board of Secondary education(A.P)</p>
+        <p><strong>School:</strong> Silver Oaks The School </p>
+        <p><strong>Percentage:</strong> 8.7 </p>
+        <p><strong>Year:</strong> 2018 </p>
+        <button onclick="downloadFile('all marks/10th.pdf')">Download Marksheet</button>
+      </div>
+    </div>
+
+    <!-- APAAR ID Section -->
+    <div class="apaar-section">
+      <h3>APAAR ID (Academic Bank of Credits)</h3>
+      <div class="apaar-card">
+        <p><strong>ABC ID:</strong> 240829080886</p>
+        <p><strong>Name:</strong> Chittoor Sai Chetan</p>
+        <p>Verified via DigiLocker</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internships Section -->
+<section id="internships" class="section">
+  <h2>Internships</h2>
+  <div class="internship-grid">
+    <!-- Internship 1 -->
+    <div class="internship-card">
+      <div class="internship-header">
+        <h3>Java Developer Intern</h3>
+        <span class="internship-date">Jan 2024 - Mar 2024</span>
+      </div>
+      <div class="internship-details">
+        <p class="company"><i class="fas fa-building"></i> TechCorp Solutions</p>
+        <div class="skills-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Spring Boot</span>
+          <span class="skill-tag">Hibernate</span>
+          <span class="skill-tag">MySQL</span>
+        </div>
+        <div class="accomplishments">
+          <h4>Key Accomplishments:</h4>
+          <ul>
+            <li>Developed RESTful API for e-commerce platform handling 1000+ daily requests</li>
+            <li>Improved code quality by 30% through JUnit testing and refactoring</li>
+            <li>Implemented JWT authentication for secure API endpoints</li>
+            <li>Reduced API response time by 40% through query optimization</li>
+          </ul>
+        </div>
+      </div>
+      <button class="view-certificate" onclick="viewCertificate('techcorp_certificate.pdf')">
+        <i class="fas fa-download"></i> View Certificate
+      </button>
+    </div>
+
+    <!-- Internship 2 -->
+    <div class="internship-card">
+      <div class="internship-header">
+        <h3>Full Stack Developer Intern</h3>
+        <span class="internship-date">Feb 2025 - Jul 2025</span>
+      </div>
+      <div class="internship-details">
+        <p class="company"><i class="fas fa-building"></i> Innovatech Systems</p>
+        <div class="skills-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Spring Boot</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">MongoDB</span>
+        </div>
+        <div class="accomplishments">
+          <h4>Key Accomplishments:</h4>
+          <ul>
+            <li>Built social media platform with 500+ active users</li>
+            <li>Implemented OAuth 2.0 authentication flow</li>
+            <li>Reduced page load time by 60% through code splitting</li>
+            <li>Developed real-time notification system using WebSockets</li>
+          </ul>
+        </div>
+      </div>
+      <button class="view-certificate" onclick="viewCertificate('innovatach_certificate.pdf')">
+        <i class="fas fa-download"></i> View Certificate
+      </button>
+    </div>
+  </div>
 </section>
 
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>💻 Technical: HTML, CSS, JavaScript, Java, SQL, AI Tools</li>
-      <li>🧠 Frameworks: Spring Boot, Servlets, JSP, Bootstrap</li>
-      <li>📚 Databases: MySQL, PostgreSQL, MongoDB (basic)</li>
-      <li>🌐 Tools: GitHub, Postman, IntelliJ, Eclipse, Maven</li>
-      <li>🗣️ Soft Skills: Communication, Time Management, Leadership, Problem Solving</li>
-    </ul>
-  </section>
 
-  <section id="downloads">
-    <h2>Downloads</h2>
-    <p><a href="assets/resume.pdf" download="SaiChetan_Resume.pdf">📄 Download Resume</a>
-    </p>
-    <p><a href="assets/mca_sem1.pdf" download>📘 Download MCA Semester 1 Marks</a></p>
-    <p><a href="#">📘 Download MCA Semester 2 Marks</a> (Coming soon)</p>
-    <p><a href="#">📘 Download MCA Semester 3 Marks</a> (Coming soon)</p>
-    <p><a href="#">📘 Download MCA Semester 4 Marks</a> (Coming soon)</p>
-  </section>
-
-  <section id="academics">
-    <h2>Academic Summary</h2>
-    <table>
-      <tr><th>Degree</th><th>Institution</th><th>Marks</th></tr>
-      <tr><td>MCA (PG)</td><td>Mohan Babu University</td><td>CGPA: 9.17 (Sem 1)</td></tr>
-      <tr><td>B.Com (CA)</td><td>Emerald's Degree college</td><td>90% / 9.0 GPA</td></tr>
-    </table>
-    <section id="internships">
-  <h2>Internship Experience</h2>
-
-  <div class="internship-card">
-    <h3>🌟 Full Stack Developer Intern – <strong>Bharat Intern</strong></h3>
-    <p><em>Feb 2025 – Mar 2025 (Virtual)</em></p>
-    <ul>
-      <li>🛠️ Developed full-stack mini projects using <strong>HTML, CSS, JavaScript, and Java</strong>.</li>
-      <li>🧩 Built and deployed <strong>CRUD applications</strong> with real-time feedback.</li>
-      <li>💡 Learned agile development workflow and practiced <strong>code versioning with Git & GitHub</strong>.</li>
-    </ul>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="contact-info">
+    <div class="contact-card">
+      <div class="contact-item">
+        <i class="fas fa-user"></i>
+        <span><strong>Name:</strong> Chittoor Sai Chetan</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <span><strong>Phone:</strong> <a href="tel:+919133852497">+91 9133852497</a></span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <span><strong>Email:</strong> <a href="mailto:saichetan347@gmail.com">saichetan347@gmail.com</a></span>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <span><strong>LinkedIn:</strong> <a href="[YOUR_LINKEDIN_URL]" target="_blank">linkedin.com/in/yourprofile</a></span>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-github"></i>
+        <span><strong>GitHub:</strong> <a href="[YOUR_GITHUB_URL]" target="_blank">github.com/yourusername</a></span>
+      </div>
+    </div>
   </div>
-
-  <div class="internship-card">
-    <h3>💻 Software Development Intern – <strong>Excelar</strong></h3>
-    <p><em>April 2025 – May 2025 (Virtual)</em></p>
-    <ul>
-      <li>🌐 Developed a <strong>responsive, user-interactive website</strong> using <strong>HTML5, CSS3, and JavaScript</strong>.</li>
-      <li>📈 Gained exposure to <strong>real-world work environments</strong> and team collaboration.</li>
-      <li>🧠 Improved <strong>communication, time management, and reporting skills</strong>.</li>
-    </ul>
-  </div>
-
-  <div class="internship-card">
-    <h3>📢 Community Marketing Lead – <strong>HalfPe.com</strong></h3>
-    <p><em>Jan 2024 – Jun 2024</em></p>
-    <ul>
-      <li>📲 Managed daily posts on <strong>WhatsApp, Facebook, Telegram, Reddit</strong>, and other platforms.</li>
-      <li>🚀 Boosted engagement through <strong>strategic content posting</strong>.</li>
-      <li>💼 Gained hands-on experience in <strong>e-commerce, digital marketing, and consumer behavior</strong>.</li>
-    </ul>
-  </div>
-
 </section>
-
- 
-
 
   <footer>
-    <p>📧 saichetan347@gmail.com | 📞 +91 9133852497</p>
-    <p>
-      🔗 <a href="https://www.linkedin.com/in/sai-chetan-300a69231/" target="_blank">LinkedIn</a> |
-      🔗 <a href="https://github.com/saichetan347" target="_blank">GitHub</a>
-    </p>
+    <p>&copy; 2024 Chittoor Sai Chetan. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
