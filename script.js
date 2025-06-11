@@ -1,25 +1,43 @@
+// Enhanced download function with visual feedback
 function downloadFile(filePath) {
-  // Create a temporary link element
+  // Create and show download feedback element
+  const feedback = document.createElement('div');
+  feedback.className = 'download-feedback';
+  feedback.innerHTML = `
+    <div class="download-spinner"></div>
+    <span>Preparing download...</span>
+  `;
+  document.body.appendChild(feedback);
+
+  // Create download link
   const link = document.createElement('a');
   link.href = filePath;
+  link.download = filePath.split('/').pop();
   
-  // Extract filename from path
-  const fileName = filePath.split('/').pop(); 
-  link.download = fileName;
+  // Update feedback when download starts
+  link.onclick = () => {
+    setTimeout(() => {
+      feedback.innerHTML = `
+        <svg class="download-check" viewBox="0 0 24 24">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+        <span>Download started!</span>
+      `;
+      setTimeout(() => {
+        document.body.removeChild(feedback);
+      }, 2000);
+    }, 300);
+  };
   
-  // Append to body (required for Firefox)
+  // Trigger download
   document.body.appendChild(link);
-  
-  // Trigger click
   link.click();
-  
-  // Clean up
   document.body.removeChild(link);
 }
 
+// Certificate viewer function
 function viewCertificate(filename) {
-  // Open certificate in new tab
-  window.open('all_marks/' + filename, '_blank');
+  window.open('all_marks/' + filename, '_blank', 'noopener,noreferrer');
 }
 
 // Smooth scrolling for navigation
@@ -31,11 +49,9 @@ document.querySelectorAll('nav a').forEach(anchor => {
     
     if (targetElement) {
       window.scrollTo({
-        top: targetElement.offsetTop - 80, // Adjust for header height
+        top: targetElement.offsetTop - 80,
         behavior: 'smooth'
       });
-      
-      // Update URL without page jump
       history.pushState(null, null, targetId);
     }
   });
@@ -45,13 +61,10 @@ document.querySelectorAll('nav a').forEach(anchor => {
 window.addEventListener('scroll', function() {
   const sections = document.querySelectorAll('.section');
   const navLinks = document.querySelectorAll('nav a');
-
   let currentSection = '';
 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-
     if (window.scrollY >= sectionTop - 200) {
       currentSection = section.getAttribute('id');
     }
@@ -59,7 +72,7 @@ window.addEventListener('scroll', function() {
 
   navLinks.forEach(link => {
     link.classList.remove('active');
-    if (link.getAttribute('href') === `#${currentSection}`) {  // Fixed: Added backticks
+    if (link.getAttribute('href') === `#${currentSection}`) {
       link.classList.add('active');
     }
   });
