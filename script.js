@@ -1,15 +1,25 @@
 function downloadFile(filePath) {
-  const fileName = filePath.split('/').pop();
+  // Create a temporary link element
   const link = document.createElement('a');
   link.href = filePath;
+  
+  // Extract filename from path
+  const fileName = filePath.split('/').pop(); 
   link.download = fileName;
-  document.body.appendChild(link); // For Firefox support
+  
+  // Append to body (required for Firefox)
+  document.body.appendChild(link);
+  
+  // Trigger click
   link.click();
+  
+  // Clean up
   document.body.removeChild(link);
 }
 
 function viewCertificate(filename) {
-  window.open('all marks/' + filename, '_blank');
+  // Open certificate in new tab
+  window.open('all_marks/' + filename, '_blank');
 }
 
 // Smooth scrolling for navigation
@@ -49,7 +59,7 @@ window.addEventListener('scroll', function() {
 
   navLinks.forEach(link => {
     link.classList.remove('active');
-    if (link.getAttribute('href') === #${currentSection}) {
+    if (link.getAttribute('href') === `#${currentSection}`) {  // Fixed: Added backticks
       link.classList.add('active');
     }
   });
